@@ -16,9 +16,6 @@ import { AppRoutingModule } from './app-routing.module';
         BrowserAnimationsModule,
         NbThemeModule.forRoot({ name: 'default' }),
         NbLayoutModule,
-        NbIconModule,
-        NbButtonModule,
-        NbEvaIconsModule,
         AppRoutingModule
     ],
     providers: [],
