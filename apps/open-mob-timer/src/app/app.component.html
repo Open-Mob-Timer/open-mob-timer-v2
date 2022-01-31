@@ -1,9 +1,25 @@
-<div style="text-align: center">
-  <h1>Welcome to open-mob-timer!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+<nb-layout>
+
+  <nb-layout-header fixed>
+  <!-- Insert header here -->
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <div style="text-align: center">
+      <h1>Welcome to open-mob-timer!</h1>
+      <button nbButton><nb-icon icon="person-outline"></nb-icon></button>
+      <img
+        width="450"
+        src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
+        alt="Nx - Smart, Fast and Extensible Build System"
+      />
+    </div>
+    <div>Message: {{ hello$ | async | json }}</div>
+
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>

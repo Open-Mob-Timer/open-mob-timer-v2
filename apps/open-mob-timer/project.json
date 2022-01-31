@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/open-mob-timer",
         "index": "apps/open-mob-timer/src/index.html",
@@ -18,7 +20,10 @@
           "apps/open-mob-timer/src/favicon.ico",
           "apps/open-mob-timer/src/assets"
         ],
-        "styles": ["apps/open-mob-timer/src/styles.scss"],
+        "styles": [
+          "./node_modules/@nebular/theme/styles/prebuilt/default.css",
+          "apps/open-mob-timer/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -86,7 +91,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/open-mob-timer"],
+      "outputs": [
+        "coverage/apps/open-mob-timer"
+      ],
       "options": {
         "jestConfig": "apps/open-mob-timer/jest.config.js",
         "passWithNoTests": true
