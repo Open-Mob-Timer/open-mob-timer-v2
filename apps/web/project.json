@@ -1,24 +1,21 @@
 {
     "projectType": "application",
-    "root": "apps/open-mob-timer",
-    "sourceRoot": "apps/open-mob-timer/src",
+    "root": "apps/web",
+    "sourceRoot": "apps/web/src",
     "prefix": "open-mob-timer-v2",
     "targets": {
         "build": {
             "executor": "@angular-devkit/build-angular:browser",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/apps/open-mob-timer",
-                "index": "apps/open-mob-timer/src/index.html",
-                "main": "apps/open-mob-timer/src/main.ts",
-                "polyfills": "apps/open-mob-timer/src/polyfills.ts",
-                "tsConfig": "apps/open-mob-timer/tsconfig.app.json",
+                "outputPath": "dist/apps/web",
+                "index": "apps/web/src/index.html",
+                "main": "apps/web/src/main.ts",
+                "polyfills": "apps/web/src/polyfills.ts",
+                "tsConfig": "apps/web/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
-                "assets": ["apps/open-mob-timer/src/favicon.ico", "apps/open-mob-timer/src/assets"],
-                "styles": [
-                    "./node_modules/@nebular/theme/styles/prebuilt/default.css",
-                    "apps/open-mob-timer/src/styles.scss"
-                ],
+                "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
+                "styles": ["./node_modules/@nebular/theme/styles/prebuilt/default.css", "apps/web/src/styles.scss"],
                 "scripts": []
             },
             "configurations": {
@@ -37,8 +34,8 @@
                     ],
                     "fileReplacements": [
                         {
-                            "replace": "apps/open-mob-timer/src/environments/environment.ts",
-                            "with": "apps/open-mob-timer/src/environments/environment.prod.ts"
+                            "replace": "apps/web/src/environments/environment.ts",
+                            "with": "apps/web/src/environments/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"
@@ -58,34 +55,34 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
                 "production": {
-                    "browserTarget": "open-mob-timer:build:production"
+                    "browserTarget": "web:build:production"
                 },
                 "development": {
-                    "browserTarget": "open-mob-timer:build:development"
+                    "browserTarget": "web:build:development"
                 }
             },
             "defaultConfiguration": "development",
             "options": {
-                "proxyConfig": "apps/open-mob-timer/proxy.conf.json"
+                "proxyConfig": "apps/web/proxy.conf.json"
             }
         },
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "browserTarget": "open-mob-timer:build"
+                "browserTarget": "web:build"
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["apps/open-mob-timer/src/**/*.ts", "apps/open-mob-timer/src/**/*.html"]
+                "lintFilePatterns": ["apps/web/src/**/*.ts", "apps/web/src/**/*.html"]
             }
         },
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/apps/open-mob-timer"],
+            "outputs": ["coverage/apps/web"],
             "options": {
-                "jestConfig": "apps/open-mob-timer/jest.config.js",
+                "jestConfig": "apps/web/jest.config.js",
                 "passWithNoTests": true
             }
         }
