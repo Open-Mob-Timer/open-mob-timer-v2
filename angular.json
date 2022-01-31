@@ -3,7 +3,6 @@
     "projects": {
         "api": "apps/api",
         "web": "apps/web",
-        "web-feature-create-mob": "libs/web/feature/create-mob",
-        "web-feature-home": "libs/web/feature/home"
+        "web-feature-create-mob": "libs/web/feature/create-mob"
     }
 }
