@@ -3,7 +3,6 @@
     "projects": {
         "api": "apps/api",
         "api-interfaces": "libs/api-interfaces",
-        "open-mob-timer-e2e": "apps/open-mob-timer-e2e",
         "web": "apps/web"
     }
 }
