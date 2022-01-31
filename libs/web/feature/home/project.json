@@ -1,21 +1,21 @@
 {
     "projectType": "library",
-    "root": "libs/web-home",
-    "sourceRoot": "libs/web-home/src",
+    "root": "libs/web/feature/home",
+    "sourceRoot": "libs/web/feature/home/src",
     "prefix": "omt",
     "targets": {
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/libs/web-home"],
+            "outputs": ["coverage/libs/web/feature/home"],
             "options": {
-                "jestConfig": "libs/web-home/jest.config.js",
+                "jestConfig": "libs/web/feature/home/jest.config.js",
                 "passWithNoTests": true
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["libs/web-home/src/**/*.ts", "libs/web-home/src/**/*.html"]
+                "lintFilePatterns": ["libs/web/feature/home/src/**/*.ts", "libs/web/feature/home/src/**/*.html"]
             }
         }
     },

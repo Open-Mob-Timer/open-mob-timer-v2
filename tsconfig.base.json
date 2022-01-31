@@ -15,7 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@omt/web-home": ["libs/web-home/src/index.ts"]
+            "@omt/web-feature-home": ["libs/web/feature/home/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

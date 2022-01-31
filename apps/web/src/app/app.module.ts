@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
-import { WebHomeModule } from '@omt/web-home';
+import { WebFeatureHomeModule } from '@omt/web-feature-home';
 
 @NgModule({
     declarations: [AppComponent],
@@ -16,7 +16,7 @@ import { WebHomeModule } from '@omt/web-home';
         NbThemeModule.forRoot({ name: 'default' }),
         NbLayoutModule,
         AppRoutingModule,
-        WebHomeModule
+        WebFeatureHomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

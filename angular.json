@@ -3,6 +3,6 @@
     "projects": {
         "api": "apps/api",
         "web": "apps/web",
-        "web-home": "libs/web-home"
+        "web-feature-home": "libs/web/feature/home"
     }
 }

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: './web-home.component.html',
     styleUrls: ['./web-home.component.scss']
 })
-export class WebHomeComponent {
+export class WebFeatureHomeComponent {
     public createMob(): void {
         console.log('createMob');
     }
