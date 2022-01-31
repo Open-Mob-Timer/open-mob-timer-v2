@@ -2,6 +2,7 @@
     "version": 2,
     "projects": {
         "api": "apps/api",
+        "api-data-access-core": "libs/api/data-access/core",
         "web": "apps/web",
         "web-feature-create-mob": "libs/web/feature/create-mob"
     }

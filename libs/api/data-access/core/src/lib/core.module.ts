@@ -12,6 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             database: 'mobtimer',
             entities: []
         })
-    ]
+    ],
+    exports: []
 })
 export class CoreModule {}

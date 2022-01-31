@@ -15,6 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "@omt/api/data-access/core": ["libs/api/data-access/core/src/index.ts"],
             "@omt/web-feature-home": ["libs/web/feature/home/src/index.ts"],
             "@omt/web/feature/create-mob": ["libs/web/feature/create-mob/src/index.ts"]
         }
