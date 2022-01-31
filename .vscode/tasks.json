@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "start",
+			"problemMatcher": [
+				{
+					"base": "$tsc-watch",
+					"background": {
+					  "activeOnStart": true,
+					  "beginsPattern": "Angular Live Development Server is listening",
+					  "endsPattern": "Compiled successfully"
+					}
+				  }
+			],
+            "label": "npm: start",
+            "detail": "Run the npm start script",
+			"isBackground": true,
+        },
+        {
+            "label": "Terminate All Tasks",
+            "command": "echo ${input:terminate}",
+            "type": "shell",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "terminate",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "terminateAll"
+        }
+    ]
+}
