@@ -2,7 +2,9 @@
     "version": 2,
     "projects": {
         "api": "apps/api",
-        "api-data-access-core": "libs/api/data-access/core",
+        "api-common": "libs/api/@common",
+        "api-mobs": "libs/api/mobs",
+        "api-users": "libs/api/users",
         "web": "apps/web",
         "web-feature-create-mob": "libs/web/feature/create-mob"
     }

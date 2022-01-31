@@ -1,10 +1,22 @@
 import { Module } from '@nestjs/common';
-import { CoreModule } from '@omt/api/data-access/core';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from '@omt/api/users';
 
 @Module({
-    imports: [CoreModule],
+    imports: [
+        TypeOrmModule.forRoot({
+            type: 'postgres',
+            host: 'localhost',
+            port: 5432,
+            username: 'postgres',
+            password: 'postgres',
+            database: 'mobtimer',
+            autoLoadEntities: true
+        }),
+        UsersModule
+    ],
     controllers: [AppController],
     providers: [AppService]
 })

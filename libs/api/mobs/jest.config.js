@@ -1,6 +1,6 @@
 module.exports = {
-    displayName: 'api-data-access-core',
-    preset: '../../../../jest.preset.js',
+    displayName: 'api-mobs',
+    preset: '../../../jest.preset.js',
     globals: {
         'ts-jest': {
             tsconfig: '<rootDir>/tsconfig.spec.json'
@@ -11,5 +11,5 @@ module.exports = {
         '^.+\\.[tj]sx?$': 'ts-jest'
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-    coverageDirectory: '../../../../coverage/libs/api/data-access/core'
+    coverageDirectory: '../../../coverage/libs/api/mobs'
 };
