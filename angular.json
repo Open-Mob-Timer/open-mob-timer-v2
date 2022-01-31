@@ -1,9 +1,9 @@
 {
-  "version": 2,
-  "projects": {
-    "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces",
-    "open-mob-timer": "apps/open-mob-timer",
-    "open-mob-timer-e2e": "apps/open-mob-timer-e2e"
-  }
+    "version": 2,
+    "projects": {
+        "api": "apps/api",
+        "api-interfaces": "libs/api-interfaces",
+        "open-mob-timer": "apps/open-mob-timer",
+        "open-mob-timer-e2e": "apps/open-mob-timer-e2e"
+    }
 }

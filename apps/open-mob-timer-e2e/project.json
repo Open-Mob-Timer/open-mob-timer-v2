@@ -1,34 +1,28 @@
 {
-  "root": "apps/open-mob-timer-e2e",
-  "sourceRoot": "apps/open-mob-timer-e2e/src",
-  "projectType": "application",
-  "targets": {
-    "e2e": {
-      "executor": "@nrwl/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/open-mob-timer-e2e/cypress.json",
-        "devServerTarget": "open-mob-timer:serve:development"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "open-mob-timer:serve:production"
+    "root": "apps/open-mob-timer-e2e",
+    "sourceRoot": "apps/open-mob-timer-e2e/src",
+    "projectType": "application",
+    "targets": {
+        "e2e": {
+            "executor": "@nrwl/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/open-mob-timer-e2e/cypress.json",
+                "devServerTarget": "open-mob-timer:serve:development"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "open-mob-timer:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/open-mob-timer-e2e/**/*.{js,ts}"]
+            }
         }
-      }
     },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
-      "options": {
-        "lintFilePatterns": [
-          "apps/open-mob-timer-e2e/**/*.{js,ts}"
-        ]
-      }
-    }
-  },
-  "tags": [],
-  "implicitDependencies": [
-    "open-mob-timer"
-  ]
+    "tags": [],
+    "implicitDependencies": ["open-mob-timer"]
 }

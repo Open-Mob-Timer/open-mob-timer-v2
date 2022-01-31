@@ -1,104 +1,94 @@
 {
-  "projectType": "application",
-  "root": "apps/open-mob-timer",
-  "sourceRoot": "apps/open-mob-timer/src",
-  "prefix": "open-mob-timer-v2",
-  "targets": {
-    "build": {
-      "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "options": {
-        "outputPath": "dist/apps/open-mob-timer",
-        "index": "apps/open-mob-timer/src/index.html",
-        "main": "apps/open-mob-timer/src/main.ts",
-        "polyfills": "apps/open-mob-timer/src/polyfills.ts",
-        "tsConfig": "apps/open-mob-timer/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/open-mob-timer/src/favicon.ico",
-          "apps/open-mob-timer/src/assets"
-        ],
-        "styles": [
-          "./node_modules/@nebular/theme/styles/prebuilt/default.css",
-          "apps/open-mob-timer/src/styles.scss"
-        ],
-        "scripts": []
-      },
-      "configurations": {
-        "production": {
-          "budgets": [
-            {
-              "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+    "projectType": "application",
+    "root": "apps/open-mob-timer",
+    "sourceRoot": "apps/open-mob-timer/src",
+    "prefix": "open-mob-timer-v2",
+    "targets": {
+        "build": {
+            "executor": "@angular-devkit/build-angular:browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/open-mob-timer",
+                "index": "apps/open-mob-timer/src/index.html",
+                "main": "apps/open-mob-timer/src/main.ts",
+                "polyfills": "apps/open-mob-timer/src/polyfills.ts",
+                "tsConfig": "apps/open-mob-timer/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": ["apps/open-mob-timer/src/favicon.ico", "apps/open-mob-timer/src/assets"],
+                "styles": [
+                    "./node_modules/@nebular/theme/styles/prebuilt/default.css",
+                    "apps/open-mob-timer/src/styles.scss"
+                ],
+                "scripts": []
             },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "4kb"
-            }
-          ],
-          "fileReplacements": [
-            {
-              "replace": "apps/open-mob-timer/src/environments/environment.ts",
-              "with": "apps/open-mob-timer/src/environments/environment.prod.ts"
-            }
-          ],
-          "outputHashing": "all"
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/open-mob-timer/src/environments/environment.ts",
+                            "with": "apps/open-mob-timer/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "production"
         },
-        "development": {
-          "buildOptimizer": false,
-          "optimization": false,
-          "vendorChunk": true,
-          "extractLicenses": false,
-          "sourceMap": true,
-          "namedChunks": true
-        }
-      },
-      "defaultConfiguration": "production"
-    },
-    "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
-      "configurations": {
-        "production": {
-          "browserTarget": "open-mob-timer:build:production"
+        "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "open-mob-timer:build:production"
+                },
+                "development": {
+                    "browserTarget": "open-mob-timer:build:development"
+                }
+            },
+            "defaultConfiguration": "development",
+            "options": {
+                "proxyConfig": "apps/open-mob-timer/proxy.conf.json"
+            }
         },
-        "development": {
-          "browserTarget": "open-mob-timer:build:development"
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "open-mob-timer:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["apps/open-mob-timer/src/**/*.ts", "apps/open-mob-timer/src/**/*.html"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/open-mob-timer"],
+            "options": {
+                "jestConfig": "apps/open-mob-timer/jest.config.js",
+                "passWithNoTests": true
+            }
         }
-      },
-      "defaultConfiguration": "development",
-      "options": {
-        "proxyConfig": "apps/open-mob-timer/proxy.conf.json"
-      }
     },
-    "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
-      "options": {
-        "browserTarget": "open-mob-timer:build"
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "apps/open-mob-timer/src/**/*.ts",
-          "apps/open-mob-timer/src/**/*.html"
-        ]
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/open-mob-timer"
-      ],
-      "options": {
-        "jestConfig": "apps/open-mob-timer/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
-  },
-  "tags": []
+    "tags": []
 }
