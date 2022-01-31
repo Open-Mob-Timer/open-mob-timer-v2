@@ -1,5 +1,5 @@
 {
-    "npmScope": "open-mob-timer-v2",
+    "npmScope": "omt",
     "affected": {
         "defaultBase": "main"
     },

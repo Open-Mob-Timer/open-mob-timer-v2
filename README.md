@@ -53,7 +53,7 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are shareable across libraries and applications. They can be imported from `@open-mob-timer-v2/mylib`.
+Libraries are shareable across libraries and applications. They can be imported from `@omt/mylib`.
 
 ## Development server
 

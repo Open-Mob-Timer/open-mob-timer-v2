@@ -2,7 +2,7 @@
     "projectType": "application",
     "root": "apps/web",
     "sourceRoot": "apps/web/src",
-    "prefix": "open-mob-timer-v2",
+    "prefix": "omt",
     "targets": {
         "build": {
             "executor": "@angular-devkit/build-angular:browser",
@@ -15,7 +15,11 @@
                 "tsConfig": "apps/web/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
                 "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-                "styles": ["./node_modules/@nebular/theme/styles/prebuilt/default.css", "apps/web/src/styles.scss"],
+                "styles": [
+                    "node_modules/bootstrap/dist/css/bootstrap.css",
+                    "./node_modules/@nebular/theme/styles/prebuilt/default.css",
+                    "apps/web/src/styles.scss"
+                ],
                 "scripts": []
             },
             "configurations": {

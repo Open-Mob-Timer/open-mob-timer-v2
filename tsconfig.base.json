@@ -15,7 +15,8 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@open-mob-timer-v2/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+            "@omt/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+            "@omt/web-home": ["libs/web-home/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

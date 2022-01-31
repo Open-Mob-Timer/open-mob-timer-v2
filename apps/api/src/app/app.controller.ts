@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@open-mob-timer-v2/api-interfaces';
+import { Message } from '@omt/api-interfaces';
 
 import { AppService } from './app.service';
 
