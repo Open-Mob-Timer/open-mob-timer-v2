@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'omt-web-home',
     templateUrl: './web-home.component.html',
     styleUrls: ['./web-home.component.scss']
 })
-export class WebHomeComponent implements OnInit {
-    constructor() {}
-
-    ngOnInit(): void {}
+export class WebHomeComponent {
+    public createMob(): void {
+        console.log('createMob');
+    }
 }
