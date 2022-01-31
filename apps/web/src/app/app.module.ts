@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
 import { WebFeatureHomeModule } from '@omt/web-feature-home';
+import { CreateMobModule } from '@omt/web/feature/create-mob';
 
 @NgModule({
     declarations: [AppComponent],
@@ -16,7 +17,7 @@ import { WebFeatureHomeModule } from '@omt/web-feature-home';
         NbThemeModule.forRoot({ name: 'default' }),
         NbLayoutModule,
         AppRoutingModule,
-        WebFeatureHomeModule
+        CreateMobModule
     ],
     providers: [],
     bootstrap: [AppComponent]
