@@ -10,7 +10,7 @@ export class User extends BaseEntity {
     @Column()
     public isAway: boolean;
 
-    @Column({ type: 'datetimeoffset', nullable: true })
+    @Column({ type: 'timestamp', nullable: true })
     public turnEndsAt?: Date;
 
     @Column()

@@ -3,20 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from '@omt/api/users';
+import { ORM_CONFIG } from '../../ormconfig';
 
 @Module({
-    imports: [
-        TypeOrmModule.forRoot({
-            type: 'postgres',
-            host: 'localhost',
-            port: 5432,
-            username: 'postgres',
-            password: 'postgres',
-            database: 'mobtimer',
-            autoLoadEntities: true
-        }),
-        UsersModule
-    ],
+    imports: [TypeOrmModule.forRoot(ORM_CONFIG), UsersModule],
     controllers: [AppController],
     providers: [AppService]
 })

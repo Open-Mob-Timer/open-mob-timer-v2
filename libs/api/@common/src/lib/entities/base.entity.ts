@@ -4,9 +4,9 @@ export abstract class BaseEntity {
     @PrimaryGeneratedColumn('uuid')
     public id: string;
 
-    @CreateDateColumn({ type: 'datetimeoffset' })
+    @CreateDateColumn({ type: 'timestamp' })
     public createdAt: Date;
 
-    @UpdateDateColumn({ type: 'datetimeoffset' })
+    @UpdateDateColumn({ type: 'timestamp' })
     public updatedAt: Date;
 }
