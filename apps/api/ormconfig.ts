@@ -10,9 +10,5 @@ export const ORM_CONFIG: TypeOrmModuleOptions = {
     username: 'postgres',
     password: 'postgres',
     database: 'mobtimer',
-    entities: [Mob, User],
-    migrations: ['apps/api/src/migrations/*'],
-    cli: {
-        migrationsDir: 'apps/api/src/migrations'
-    }
+    entities: [Mob, User]
 };
