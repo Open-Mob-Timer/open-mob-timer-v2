@@ -1,0 +1,23 @@
+{
+    "projectType": "library",
+    "root": "libs/web/mob",
+    "sourceRoot": "libs/web/mob/src",
+    "prefix": "omt",
+    "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/web/mob"],
+            "options": {
+                "jestConfig": "libs/web/mob/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["libs/web/mob/src/**/*.ts", "libs/web/mob/src/**/*.html"]
+            }
+        }
+    },
+    "tags": []
+}

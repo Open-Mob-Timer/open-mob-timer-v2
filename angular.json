@@ -6,6 +6,7 @@
         "api-mobs": "libs/api/mobs",
         "api-users": "libs/api/users",
         "web": "apps/web",
-        "web-home": "libs/web/home"
+        "web-home": "libs/web/home",
+        "web-mob": "libs/web/mob"
     }
 }
