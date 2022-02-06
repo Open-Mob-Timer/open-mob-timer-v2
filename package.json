@@ -8,6 +8,8 @@
         "start": "nx run-many --parallel --target=serve --projects=web,api --configuration=dev",
         "build": "nx build",
         "test": "nx test",
+        "lint": "nx lint",
+        "lint:quiet": "nx lint --quiet",
         "typeorm": "ts-node -P ./apps/api/tsconfig.json -O \"{\\\"module\\\": \\\"commonjs\\\"}\" -r tsconfig-paths/register ./node_modules/typeorm/cli.js -f ./apps/api/ormconfig.cli.ts",
         "db:migration:generate": "npm run typeorm -- migration:generate -n",
         "db:migration:run": "npm run typeorm -- migration:run"
