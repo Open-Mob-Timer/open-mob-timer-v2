@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
+import { ENVIRONMENT } from '../environments/environment.token';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [AppComponent],
@@ -16,7 +18,12 @@ import { AppRoutingModule } from './app-routing.module';
         NbLayoutModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        {
+            provide: ENVIRONMENT,
+            useValue: environment
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
