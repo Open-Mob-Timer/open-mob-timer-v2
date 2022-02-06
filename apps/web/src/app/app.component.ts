@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Environment } from '../environments/environment.interface';
-import { ENVIRONMENT } from '../environments/environment.token';
+import { ENVIRONMENT, Environment } from '@omt/web/core';
 
 @Component({
     selector: 'omt-root',
