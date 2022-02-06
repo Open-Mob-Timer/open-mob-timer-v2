@@ -18,6 +18,7 @@
                 "styles": [
                     "node_modules/bootstrap/dist/css/bootstrap.css",
                     "./node_modules/@nebular/theme/styles/prebuilt/default.css",
+                    "./node_modules/@nebular/theme/styles/prebuilt/cosmic.css",
                     "apps/web/src/styles.scss"
                 ],
                 "scripts": []

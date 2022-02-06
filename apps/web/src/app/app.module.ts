@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
         BrowserModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        NbThemeModule.forRoot({ name: 'default' }),
+        NbThemeModule.forRoot({ name: 'cosmic' }),
         NbLayoutModule,
         CoreModule,
         AppRoutingModule
