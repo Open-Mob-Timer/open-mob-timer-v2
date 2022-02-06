@@ -1,21 +1,21 @@
 {
     "projectType": "library",
-    "root": "libs/web/core",
-    "sourceRoot": "libs/web/core/src",
+    "root": "libs/web/@core",
+    "sourceRoot": "libs/web/@core/src",
     "prefix": "omt",
     "targets": {
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/libs/web/core"],
+            "outputs": ["coverage/libs/web/@core"],
             "options": {
-                "jestConfig": "libs/web/core/jest.config.js",
+                "jestConfig": "libs/web/@core/jest.config.js",
                 "passWithNoTests": true
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["libs/web/core/src/**/*.ts", "libs/web/core/src/**/*.html"]
+                "lintFilePatterns": ["libs/web/@core/src/**/*.ts", "libs/web/@core/src/**/*.html"]
             }
         }
     },

@@ -38,8 +38,8 @@
                     ],
                     "fileReplacements": [
                         {
-                            "replace": "libs/web/core/src/lib/environments/environment.ts",
-                            "with": "libs/web/core/src/lib/environments/environment.prod.ts"
+                            "replace": "libs/web/@core/src/lib/environments/environment.ts",
+                            "with": "libs/web/@core/src/lib/environments/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"

@@ -6,7 +6,7 @@
         "api-mobs": "libs/api/mobs",
         "api-users": "libs/api/users",
         "web": "apps/web",
-        "web-core": "libs/web/core",
+        "web-core": "libs/web/@core",
         "web-home": "libs/web/home",
         "web-mob": "libs/web/mob"
     }
