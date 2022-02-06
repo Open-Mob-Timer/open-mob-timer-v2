@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
-import { CreateMobModule } from '@omt/web/feature/create-mob';
 
 @NgModule({
     declarations: [AppComponent],
@@ -15,8 +14,7 @@ import { CreateMobModule } from '@omt/web/feature/create-mob';
         BrowserAnimationsModule,
         NbThemeModule.forRoot({ name: 'default' }),
         NbLayoutModule,
-        AppRoutingModule,
-        CreateMobModule
+        AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]

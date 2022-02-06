@@ -18,7 +18,6 @@
             "@omt/api/common": ["libs/api/@common/src/index.ts"],
             "@omt/api/mobs": ["libs/api/mobs/src/index.ts"],
             "@omt/api/users": ["libs/api/users/src/index.ts"],
-            "@omt/web/feature/create-mob": ["libs/web/feature/create-mob/src/index.ts"],
             "@omt/web/home": ["libs/web/home/src/index.ts"]
         }
     },
