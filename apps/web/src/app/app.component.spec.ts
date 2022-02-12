@@ -1,14 +1,24 @@
-import { TestBed, async } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ENVIRONMENT } from '@omt/web/core';
+import { NbLayoutModule, NbThemeModule } from '@nebular/theme';
 
 describe('AppComponent', () => {
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [AppComponent],
-            imports: [HttpClientModule]
-        }).compileComponents();
-    }));
+    beforeEach(
+        waitForAsync(() => {
+            TestBed.configureTestingModule({
+                declarations: [AppComponent],
+                imports: [NbThemeModule.forRoot({ name: 'cosmic' }), NbLayoutModule, RouterTestingModule],
+                providers: [
+                    {
+                        provide: ENVIRONMENT,
+                        useValue: {}
+                    }
+                ]
+            }).compileComponents();
+        })
+    );
 
     it('should create the app', () => {
         const fixture = TestBed.createComponent(AppComponent);
