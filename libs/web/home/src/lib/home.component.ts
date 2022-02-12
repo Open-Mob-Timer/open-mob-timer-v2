@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { MobsService } from '@omt/web/data-access'; // TODO: Fix tags/depConstraints
+import { take } from 'rxjs';
 
 @Component({
     selector: 'omt-home',
     templateUrl: './home.component.html'
 })
 export class HomeComponent {
+    public constructor(private mobsService: MobsService) {}
     public onCreateMobClick(mobName: string): void {
-        console.log(mobName);
+        this.mobsService.createMob(mobName).pipe(take(1)).subscribe();
     }
 }
