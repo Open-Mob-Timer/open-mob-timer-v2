@@ -19,6 +19,7 @@
             "@omt/api/mobs": ["libs/api/mobs/src/index.ts"],
             "@omt/api/users": ["libs/api/users/src/index.ts"],
             "@omt/web/core": ["libs/web/@core/src/index.ts"],
+            "@omt/web/data-access": ["libs/web/data-access/src/index.ts"],
             "@omt/web/home": ["libs/web/home/src/index.ts"],
             "@omt/web/mob": ["libs/web/mob/src/index.ts"]
         }
