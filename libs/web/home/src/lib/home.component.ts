@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MobsService } from '@omt/web/data-access'; // TODO: Fix tags/depConstraints
+import { MobsService } from '@omt/web/data-access';
 import { take } from 'rxjs';
 
 @Component({

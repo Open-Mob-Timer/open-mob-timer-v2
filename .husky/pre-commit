@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+printf "****************************************\n"
+printf "pre-commit hook fired\n"
+printf "****************************************\n"
+
+npm run lint -- --quiet
+
+printf "****************************************\n"
+printf "pre-commit hook complete\n"
+printf "****************************************\n"
