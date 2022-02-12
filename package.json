@@ -7,12 +7,14 @@
         "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
         "start": "nx run-many --parallel --target=serve --projects=web,api --configuration=dev",
         "build": "nx build",
+        "build:api": "nx build api",
         "test": "nx test",
         "lint": "nx lint",
         "lint:quiet": "nx lint --quiet",
         "typeorm": "ts-node -P ./apps/api/tsconfig.json -O \"{\\\"module\\\": \\\"commonjs\\\"}\" -r tsconfig-paths/register ./node_modules/typeorm/cli.js -f ./apps/api/ormconfig.cli.ts",
         "db:migration:generate": "npm run typeorm -- migration:generate -n",
-        "db:migration:run": "npm run typeorm -- migration:run"
+        "db:migration:run": "npm run typeorm -- migration:run",
+        "start:azure": "npm run build:api && func host start"
     },
     "scripty": {
         "path": "tools/scripts"
@@ -28,8 +30,10 @@
         "@angular/platform-browser": "~13.2.0",
         "@angular/platform-browser-dynamic": "~13.2.0",
         "@angular/router": "~13.2.0",
+        "@azure/functions": "^1.0.3",
         "@nebular/eva-icons": "^9.0.0",
         "@nebular/theme": "^9.0.0",
+        "@nestjs/azure-func-http": "^0.8.0",
         "@nestjs/common": "^8.0.0",
         "@nestjs/core": "^8.0.0",
         "@nestjs/platform-express": "^8.0.0",
