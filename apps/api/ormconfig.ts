@@ -1,6 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { Mob } from '@omt/api/mobs';
-import { User } from '@omt/api/users';
+import { Mob, User } from '@omt/api/common';
 
 // TODO: Setup Configuration Service with .env
 export const ORM_CONFIG: TypeOrmModuleOptions = {
