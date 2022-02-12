@@ -7,7 +7,6 @@ import { MobsService } from './mobs.service';
 @Module({
     imports: [TypeOrmModule.forFeature([Mob])],
     controllers: [MobsController],
-    providers: [MobsService],
-    exports: []
+    providers: [MobsService]
 })
 export class MobsModule {}

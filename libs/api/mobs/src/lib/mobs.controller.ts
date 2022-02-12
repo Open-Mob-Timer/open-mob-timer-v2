@@ -6,6 +6,7 @@ import { MobsService } from './mobs.service';
 @Controller('mobs')
 export class MobsController {
     constructor(private mobsService: MobsService) {}
+
     @Post()
     public create(@Body() mob: MobCreateDto): Mob {
         return this.mobsService.create(mob);
