@@ -9,6 +9,7 @@
         "start:azure": "npm run build:api && func host start",
         "start:api": "nx serve api",
         "storybook": "nx storybook web-shared-storybook",
+        "build": "nx run-many --parallel --target=build --projects=web,api --prod",
         "build:web": "nx build web --prod",
         "build:api": "nx build api --prod",
         "test": "nx affected --target=test --parallel --max-parallel=2",
