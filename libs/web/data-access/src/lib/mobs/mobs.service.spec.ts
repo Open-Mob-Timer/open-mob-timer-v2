@@ -1,13 +1,17 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
-import { ApiMobsService } from './mobs.service';
+import { MobsService } from './mobs.service';
 
 describe('MobsService', () => {
-    let service: ApiMobsService;
+    let service: MobsService;
 
     beforeEach(() => {
-        TestBed.configureTestingModule({});
-        service = TestBed.inject(ApiMobsService);
+        TestBed.configureTestingModule({
+            imports: [HttpClientModule],
+            providers: [HttpClient]
+        });
+        service = TestBed.inject(MobsService);
     });
 
     it('should be created', () => {
