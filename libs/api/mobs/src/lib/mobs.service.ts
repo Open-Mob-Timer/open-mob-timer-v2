@@ -11,7 +11,8 @@ export class MobsService {
         private mobsRepository: Repository<Mob>
     ) {}
 
-    public create(mob: MobCreateDto): Mob {
-        return this.mobsRepository.create(mob);
+    public async create(mob: MobCreateDto): Promise<Mob> {
+        const entity = this.mobsRepository.create(mob);
+        return await this.mobsRepository.save(entity);
     }
 }
