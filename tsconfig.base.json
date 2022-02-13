@@ -18,10 +18,11 @@
             "@omt/api/common": ["libs/api/@common/src/index.ts"],
             "@omt/api/mobs": ["libs/api/mobs/src/index.ts"],
             "@omt/api/users": ["libs/api/users/src/index.ts"],
-            "@omt/web/feature/mob": ["libs/web/feature/mob/src/index.ts"],
             "@omt/web/core": ["libs/web/@core/src/index.ts"],
             "@omt/web/data": ["libs/web/data/src/index.ts"],
-            "@omt/web/feature/home": ["libs/web/feature/home/src/index.ts"]
+            "@omt/web/feature/home": ["libs/web/feature/home/src/index.ts"],
+            "@omt/web/feature/mob": ["libs/web/feature/mob/src/index.ts"],
+            "@omt/web/shared/storybook": ["libs/web/shared/storybook/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

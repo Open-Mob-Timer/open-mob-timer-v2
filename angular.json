@@ -9,6 +9,7 @@
         "web-core": "libs/web/@core",
         "web-data": "libs/web/data",
         "web-feature-home": "libs/web/feature/home",
-        "web-feature-mob": "libs/web/feature/mob"
+        "web-feature-mob": "libs/web/feature/mob",
+        "web-shared-storybook": "libs/web/shared/storybook"
     }
 }
