@@ -1,4 +1,4 @@
-import { Body, Controller, HttpException, Post } from '@nestjs/common';
+import { Body, Controller, HttpException, HttpStatus, Post } from '@nestjs/common';
 import { Mob } from '@omt/api/common';
 import { MobCreateDto } from './dtos/mob-create.dto';
 import { MobsService } from './mobs.service';
@@ -14,8 +14,7 @@ export class MobsController {
 
             return result;
         } catch (error) {
-            throw new HttpException(error, 500);
-            // throw new HttpException(error, HttpStatusCode.InternalServerError);
+            throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
