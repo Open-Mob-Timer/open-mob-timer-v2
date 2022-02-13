@@ -7,6 +7,7 @@
         "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
         "start": "nx run-many --parallel --target=serve --projects=web,api --configuration=dev",
         "start:azure": "npm run build:api && func host start",
+        "storybook": "nx storybook web-shared-storybook",
         "build": "nx build",
         "build:api": "nx build api",
         "test": "nx affected --target=test --parallel --max-parallel=2",
@@ -63,9 +64,14 @@
         "@nrwl/linter": "13.7.1",
         "@nrwl/nest": "13.7.1",
         "@nrwl/node": "13.7.1",
+        "@nrwl/storybook": "^13.8.1",
         "@nrwl/tao": "13.7.1",
         "@nrwl/workspace": "13.7.1",
         "@schematics/angular": "~13.2.0",
+        "@storybook/addon-essentials": "~6.5.0-alpha.39",
+        "@storybook/angular": "~6.5.0-alpha.39",
+        "@storybook/builder-webpack5": "~6.5.0-alpha.39",
+        "@storybook/manager-webpack5": "~6.5.0-alpha.39",
         "@types/jest": "27.0.2",
         "@types/node": "16.11.7",
         "@typescript-eslint/eslint-plugin": "~5.10.0",
@@ -81,6 +87,7 @@
         "prettier": "^2.5.1",
         "ts-jest": "27.0.5",
         "ts-node": "^10.4.0",
-        "typescript": "~4.5.2"
+        "typescript": "~4.5.2",
+        "webpack": "^5.68.0"
     }
 }
