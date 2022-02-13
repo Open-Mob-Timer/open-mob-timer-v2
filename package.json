@@ -9,7 +9,7 @@
         "start:azure": "npm run build:api && func host start",
         "build": "nx build",
         "build:api": "nx build api",
-        "test": "nx affected:test --parallel --max-parallel=2",
+        "test": "nx affected --target=test --parallel --max-parallel=2",
         "lint": "nx affected:lint",
         "lint:quiet": "nx affected:lint --quiet",
         "prepare": "husky install",
