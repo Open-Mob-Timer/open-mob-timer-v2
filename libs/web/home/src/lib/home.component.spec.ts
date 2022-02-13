@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { NbButtonModule, NbFormFieldModule, NbIconModule, NbInputModule, NbThemeModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { MobsService } from '@omt/web/data-access';
+import { MobsService } from '@omt/web/data';
 import { CreateMobComponent } from './components/create-mob/create-mob.component';
 
 import { HomeComponent } from './home.component';

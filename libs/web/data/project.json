@@ -1,24 +1,23 @@
 {
     "projectType": "library",
-    "root": "libs/web/data-access",
-    "sourceRoot": "libs/web/data-access/src",
+    "root": "libs/web/data",
+    "sourceRoot": "libs/web/data/src",
     "prefix": "omt",
     "targets": {
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/libs/web/data-access"],
+            "outputs": ["coverage/libs/web/data"],
             "options": {
-                "jestConfig": "libs/web/data-access/jest.config.js",
+                "jestConfig": "libs/web/data/jest.config.js",
                 "passWithNoTests": true
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["libs/web/data-access/src/**/*.ts", "libs/web/data-access/src/**/*.html"]
+                "lintFilePatterns": ["libs/web/data/src/**/*.ts", "libs/web/data/src/**/*.html"]
             }
         }
     },
     "tags": ["scope:web"]
-
 }

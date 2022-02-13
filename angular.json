@@ -7,7 +7,7 @@
         "api-users": "libs/api/users",
         "web": "apps/web",
         "web-core": "libs/web/@core",
-        "web-data-access": "libs/web/data-access",
+        "web-data": "libs/web/data",
         "web-home": "libs/web/home",
         "web-mob": "libs/web/mob"
     }

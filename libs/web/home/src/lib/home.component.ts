@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MobsService } from '@omt/web/data-access';
+import { MobsService } from '@omt/web/data';
 import { take } from 'rxjs';
 
 @Component({
