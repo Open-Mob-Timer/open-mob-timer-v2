@@ -8,7 +8,7 @@
         "web": "apps/web",
         "web-core": "libs/web/@core",
         "web-data": "libs/web/data",
-        "web-home": "libs/web/home",
-        "web-mob": "libs/web/mob"
+        "web-feature-home": "libs/web/feature/home",
+        "web-feature-mob": "libs/web/feature/mob"
     }
 }

@@ -1,0 +1,12 @@
+<nb-form-field class="mx-auto">
+    <input
+        type="text"
+        [(ngModel)]="mobName"
+        placeholder="Enter a name for your mob"
+        aria-label="Enter your mob's name"
+        nbInput
+    />
+    <button nbSuffix nbButton ghost (click)="createMob()">
+        <nb-icon icon="arrow-forward-outline"></nb-icon>
+    </button>
+</nb-form-field>

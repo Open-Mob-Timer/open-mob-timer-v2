@@ -1,6 +1,6 @@
 module.exports = {
-    displayName: 'web-mob',
-    preset: '../../../jest.preset.js',
+    displayName: 'web-feature-mob',
+    preset: '../../../../jest.preset.js',
     setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
     globals: {
         'ts-jest': {
@@ -8,7 +8,7 @@ module.exports = {
             stringifyContentPathRegex: '\\.(html|svg)$'
         }
     },
-    coverageDirectory: '../../../coverage/libs/web/mob',
+    coverageDirectory: '../../../../coverage/libs/web/feature/mob',
     transform: {
         '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular'
     },
