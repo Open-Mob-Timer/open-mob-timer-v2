@@ -6,6 +6,7 @@ export const ORM_CONFIG: TypeOrmModuleOptions = {
     type: 'postgres',
     host: process.env.TYPEORM_HOST || 'localhost',
     port: 5432,
+    ssl: process.env.TYPEORM_SSL === 'true',
     username: process.env.TYPEORM_USERNAME || 'postgres',
     password: process.env.TYPEORM_PASSWORD || 'postgres',
     database: process.env.TYPEORM_DATABASE || 'mobtimer',

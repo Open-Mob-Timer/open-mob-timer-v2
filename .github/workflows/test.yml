@@ -5,26 +5,28 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  npm:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-    - name: Set up Node.js version
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16.x'
-        cache: 'npm'
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'master'
+      - run: |
+          echo "BASE: ${{ env.NX_BASE }}"
+          echo "HEAD: ${{ env.NX_HEAD }}"
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          cache: 'npm'
+          registry-url: https://registry.npmjs.org/
 
-    - name: NPM CI
-      run: npm ci
-    
-    - name: NPM Build
-      run: npm run build
+      - name: Install Dependencies
+        run: npm ci
 
-    - name: NPM Test
-      run: npm test
+      - name: Test
+        run: npm run test:ci
